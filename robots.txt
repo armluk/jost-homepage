@@ -1,0 +1,4 @@
+# Testversion: Suchmaschinen sollen die Seite nicht aufnehmen.
+# Für die definitive Homepage diese Datei löschen oder durch "Allow: /" ersetzen.
+User-agent: *
+Disallow: /

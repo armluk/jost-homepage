@@ -1,0 +1,87 @@
+﻿<!doctype html>
+<html lang="de-CH">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Occasionen | Jost Landtechnik AG</title>
+<meta name="description" content="Aktuelle Occasionsmaschinen – live aus unseren Inseraten auf agropool.ch.">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="favicon.png">
+</head>
+<body>
+<script src="layout.js" data-page="occasionen"></script>
+
+<div class="phero">
+  <div class="wrap">
+    <div class="crumb"><a href="index.html">Start</a> › Occasionen</div>
+    <span class="eyebrow">Occasionen</span>
+    <h1>Geprüfte Gebrauchtmaschinen.</h1>
+    <p>Alle aktuellen Inserate – automatisch aktuell, direkt aus agropool.ch. Interesse an einer Maschine? Rufen Sie uns an.</p>
+  </div>
+</div>
+
+<!-- OCCASION IM FOKUS (zufälliges Inserat aus agropool, eigenes Design) -->
+<section class="spot-sec" id="spot-sec" hidden>
+  <div class="wrap">
+    <div class="spot-head">
+      <div>
+        <span class="eyebrow">Occasion im Fokus</span>
+        <h2>Gerade bei uns in Langnau.</h2>
+      </div>
+      <button class="btn btn-line" id="spot-next" type="button">Nächste Occasion</button>
+    </div>
+    <article class="spot" id="spot" aria-live="polite">
+      <a class="spot-img" id="spot-img" target="_blank" rel="noopener"><span class="spot-badge" id="spot-badge">Occasion</span></a>
+      <div class="spot-bd">
+        <p class="spot-loc"><i class="i" data-i="pin"></i><span id="spot-loc"></span></p>
+        <h3 id="spot-title"></h3>
+        <p class="spot-price" id="spot-price"></p>
+        <p class="spot-vat" id="spot-vat"></p>
+        <div class="cta">
+          <a class="btn btn-y" id="spot-ask" href="kontakt.html">Anfrage senden</a>
+          <a class="btn btn-line" id="spot-link" target="_blank" rel="noopener">Details auf agropool.ch</a>
+        </div>
+        <p class="note" id="spot-count"></p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section style="padding-top:50px">
+  <div class="wrap">
+    <span class="eyebrow">Alle Inserate</span>
+    <div class="embed">
+      <div class="bar">
+        <span><b style="color:var(--yellow)">Live-Inserate</b> · Standort Langnau · agropool.ch</span>
+        <span style="display:flex;gap:.6rem;flex-wrap:wrap">
+          <a class="btn btn-y" href="tel:+41344026264" style="padding:.55rem 1rem"><i class="i" data-i="phone"></i>034 402 62 64</a>
+          <a class="btn btn-o" href="https://www.agropool.ch/de/arm-eggiwil-ag/c233/" target="_blank" rel="noopener" style="padding:.55rem 1rem">Auf agropool.ch öffnen</a>
+        </span>
+      </div>
+      <iframe src="https://www.agropool.ch/de/sdk/?accountId=233&amp;filter=%7B%22location%22%3A%223550%22%7D" title="Occasionen auf agropool.ch" loading="lazy"></iframe>
+    </div>
+    <p class="note">Test: Eingebunden sind die Inserate von Arm Eggiwil AG (agropool-Konto 233), gefiltert auf den Standort 3550 Langnau. Für die definitive Seite die Integration mit agropool abklären.</p>
+  </div>
+</section>
+
+<section class="contact">
+  <div class="wrap" style="display:flex;justify-content:space-between;align-items:center;gap:2rem;flex-wrap:wrap">
+    <div>
+      <span class="eyebrow">Ankauf</span>
+      <h2>Maschine verkaufen?</h2>
+      <p class="lead">Wir kaufen gebrauchte Land-, Forst- und Kommunalmaschinen an oder nehmen sie in Zahlung.</p>
+    </div>
+    <a href="kontakt.html" class="btn btn-y">Maschine anbieten</a>
+  </div>
+</section>
+
+<script src="occasion-spot.js"></script>
+
+</body>
+</html>
+
+
+
+
+
