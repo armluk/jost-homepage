@@ -3,6 +3,8 @@
 Statische Website (HTML, CSS, JavaScript) der Jost Landtechnik AG, Obermattweg 25, 3550 Langnau i.E.
 Kein Build-Schritt nötig: Die Dateien können direkt auf einen Webserver oder GitHub Pages geladen werden.
 
+Online-Vorschau: https://armluk.github.io/jost-homepage/ · Stand: 09.10.2026
+
 ## Seiten
 | Datei | Inhalt |
 |---|---|
