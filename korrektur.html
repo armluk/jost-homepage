@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="de-CH">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex">
+<title>Korrekturen jostland.ch</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;900&display=swap">
+<style>
+  :root{--y:#fff005;--d:#2E3236;--g:#5B6267;--l:#eceff1;--line:#d5dade}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:Archivo,Arial,sans-serif;color:var(--d);background:#fff;font-size:16px;line-height:1.5}
+  .app{display:grid;grid-template-columns:280px 1fr;min-height:100vh}
+  nav{background:var(--d);color:#fff;padding:24px 0;position:sticky;top:0;height:100vh;overflow:auto}
+  nav h1{font-size:1.05rem;font-weight:900;padding:0 22px 4px}
+  nav small{display:block;color:#c9cfd3;font-size:.78rem;padding:0 22px 18px}
+  nav a{display:flex;justify-content:space-between;gap:.6rem;padding:.7rem 22px;color:#fff;text-decoration:none;font-weight:600;font-size:.92rem;border-left:5px solid transparent}
+  nav a:hover{background:#3a3f44;border-left-color:var(--y)}
+  nav a .st{font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--d);background:var(--y);padding:.1rem .4rem;align-self:center}
+  nav a .st.ok{background:#c9cfd3}
+  nav .sendlink{margin:18px 22px 0;display:block;text-align:center;background:var(--y);color:var(--d);font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:.8rem;padding:.8rem;border:0;border-left:0}
+  main{padding:36px 48px 80px;max-width:900px}
+  .eyebrow{display:inline-flex;align-items:center;gap:.6rem;font-size:.75rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--g)}
+  .eyebrow::before{content:"";width:26px;height:6px;background:var(--y)}
+  h2{font-size:1.6rem;font-weight:900;margin:.4rem 0 .3rem}
+  .intro{color:var(--g);margin-bottom:28px}
+  section{border:1px solid var(--line);border-left:6px solid var(--y);padding:22px 24px;margin-bottom:22px;scroll-margin-top:20px}
+  section h3{font-size:1.15rem;font-weight:900;margin-bottom:4px}
+  .where{font-size:.82rem;color:var(--g);margin-bottom:14px}
+  .where a{color:var(--d)}
+  .now{background:var(--l);padding:8px 12px;font-size:.9rem;margin-bottom:14px}
+  .now b{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--g);display:block}
+  label{display:block;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--g);margin:10px 0 4px}
+  input[type=text],input[type=number],textarea{width:100%;padding:.65rem .75rem;border:1px solid #9aa3a8;font:inherit;font-size:.98rem;color:var(--d)}
+  input:focus,textarea:focus{outline:3px solid var(--d);outline-offset:0}
+  textarea{min-height:64px;resize:vertical}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .opts{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 4px}
+  .opts label{display:inline-flex;align-items:center;gap:.45rem;margin:0;padding:.5rem .8rem;border:1px solid var(--line);text-transform:none;letter-spacing:0;font-size:.92rem;font-weight:600;color:var(--d);cursor:pointer}
+  .opts input{accent-color:var(--d)}
+  .opts label:has(input:checked){background:var(--y);border-color:var(--d)}
+  .hint{font-size:.82rem;color:var(--g);margin-top:6px}
+  .fields.off{opacity:.35;pointer-events:none}
+  #senden{border-left-color:var(--d);background:var(--l)}
+  #out{width:100%;min-height:220px;font-family:Consolas,monospace;font-size:.85rem;margin-top:10px}
+  .btn{display:inline-flex;align-items:center;gap:.6rem;background:var(--y);color:var(--d);border:2px solid var(--d);font:inherit;font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-size:.82rem;padding:.8rem 1.2rem;cursor:pointer;margin-top:12px}
+  .btn:hover{background:var(--d);color:var(--y)}
+  .ok-msg{display:none;margin-left:.8rem;font-weight:700;color:#1b7f3b}
+  @media(max-width:800px){.app{grid-template-columns:1fr}nav{position:static;height:auto}main{padding:24px 16px}.row{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="app">
+<nav>
+  <h1>Korrekturen jostland.ch</h1>
+  <small>Offene Punkte vor dem Aufschalten</small>
+  <a href="#kennzahl">Startseite – Erfahrung <span class="st" data-for="kennzahl">offen</span></a>
+  <a href="#personen">Kontakt – Ansprechpartner <span class="st" data-for="personen">offen</span></a>
+  <a href="#parkplatz">Kontakt – Parkplätze <span class="st" data-for="parkplatz">offen</span></a>
+  <a href="#formular">Kontakt – Formular <span class="st" data-for="formular">offen</span></a>
+  <a href="#werkstatt">Arbeiten – Werkstatt-Beispiele <span class="st" data-for="werkstatt">offen</span></a>
+  <a href="#oldtimer">Arbeiten – Oldtimer-Projekte <span class="st" data-for="oldtimer">offen</span></a>
+  <a href="#recht">Impressum &amp; Datenschutz <span class="st" data-for="recht">offen</span></a>
+  <a href="#senden" class="sendlink">Änderungen übernehmen</a>
+</nav>
+
+<main>
+  <span class="eyebrow">Vor dem Aufschalten</span>
+  <h2>Platzhalter ersetzen.</h2>
+  <p class="intro">Bei jedem Punkt die richtigen Angaben eintragen oder «ausblenden» wählen. Über die Links siehst du jeweils die Stelle auf der Test-Homepage. Ganz unten auf «Per E-Mail senden» klicken und die E-Mail an Lukas Arm schicken – er übernimmt alles auf die Homepage. Eingaben bleiben in diesem Browser gespeichert, auch wenn du die Seite schliesst.</p>
+
+  <section id="kennzahl" data-k="kennzahl">
+    <h3>Startseite – Jahre Erfahrung</h3>
+    <p class="where">Kennzahlen-Band auf der <a href="index.html#marken" target="_blank">Startseite</a></p>
+    <div class="now"><b>Heute</b>25+ · Jahre Erfahrung [Platzhalter]</div>
+    <div class="opts"><label><input type="radio" name="kennzahl_mode" value="aendern" checked> Zahl eintragen</label><label><input type="radio" name="kennzahl_mode" value="aus"> Kennzahl ausblenden</label></div>
+    <div class="fields" data-mode="kennzahl_mode">
+      <div class="row">
+        <div><label>Zahl (Jahre)</label><input type="number" name="kennzahl_jahre" placeholder="z. B. 40"></div>
+        <div><label>Text darunter</label><input type="text" name="kennzahl_text" value="Jahre Erfahrung"></div>
+      </div>
+      <p class="hint">Tipp: z. B. «Jahre Erfahrung» oder «Jahre Werkstatt in Langnau» – mit «+» dahinter, wenn es eine Mindestangabe ist.</p>
+    </div>
+  </section>
+
+  <section id="personen" data-k="personen">
+    <h3>Kontakt – Ansprechpartner</h3>
+    <p class="where">Personen-Karten auf der <a href="kontakt.html" target="_blank">Kontaktseite</a></p>
+    <label>Einleitungssatz</label>
+    <input type="text" name="p_intro" value="Ihre Ansprechpartner bei uns in Langnau.">
+    <p class="hint">Heute: «Hier erscheinen Ihre Mitarbeitenden mit Foto, Funktion und Direktkontakt. [Namen &amp; Fotos folgen]»</p>
+
+    <label style="margin-top:18px">1 · Geschäftsleitung</label>
+    <div class="row">
+      <div><label>Name</label><input type="text" name="p1_name" value="Markus Arm"></div>
+      <div><label>Funktion</label><input type="text" name="p1_funktion" value="Geschäftsführer"></div>
+      <div><label>Telefon direkt (leer = Hauptnummer)</label><input type="text" name="p1_tel" placeholder="034 402 62 64"></div>
+      <div><label>E-Mail (leer = info@jostland.ch)</label><input type="text" name="p1_mail" placeholder="markus.arm@jostland.ch"></div>
+    </div>
+
+    <label style="margin-top:18px">2 · Werkstattleitung</label>
+    <div class="row">
+      <div><label>Name</label><input type="text" name="p2_name" value="Adrian Bigler"></div>
+      <div><label>Aufgaben</label><input type="text" name="p2_funktion" value="Service, Reparatur, Werkstattplanung"></div>
+      <div><label>Telefon direkt (leer = Hauptnummer)</label><input type="text" name="p2_tel"></div>
+      <div><label>E-Mail (optional)</label><input type="text" name="p2_mail"></div>
+    </div>
+    <p class="hint">Heute steht bei Adrian Bigler noch «Neumaschinen &amp; Occasionen» – bitte anpassen.</p>
+
+    <label style="margin-top:18px">3 · Werkstatt</label>
+    <div class="opts"><label><input type="radio" name="p3_mode" value="aendern"> Person eintragen</label><label><input type="radio" name="p3_mode" value="aus" checked> Karte ausblenden</label></div>
+    <div class="fields row" data-mode="p3_mode">
+      <div><label>Name</label><input type="text" name="p3_name"></div>
+      <div><label>Aufgaben</label><input type="text" name="p3_funktion" value="Service, Reparatur, Notdienst"></div>
+      <div><label>Telefon direkt</label><input type="text" name="p3_tel"></div>
+      <div><label>E-Mail (optional)</label><input type="text" name="p3_mail"></div>
+    </div>
+
+    <label style="margin-top:18px">4 · Ersatzteile</label>
+    <div class="opts"><label><input type="radio" name="p4_mode" value="aendern"> Person eintragen</label><label><input type="radio" name="p4_mode" value="aus" checked> Karte ausblenden</label></div>
+    <div class="fields row" data-mode="p4_mode">
+      <div><label>Name</label><input type="text" name="p4_name"></div>
+      <div><label>Aufgaben</label><input type="text" name="p4_funktion" value="Teile &amp; Zubehör, Stihl-Shop"></div>
+      <div><label>Telefon direkt</label><input type="text" name="p4_tel"></div>
+      <div><label>E-Mail (optional)</label><input type="text" name="p4_mail"></div>
+    </div>
+    <p class="hint">Fotos: wenn vorhanden, Datei mit dem Namen der Person in den Ordner <b>aktuelles-bilder</b> legen und hier vermerken.</p>
+    <label>Bemerkung zu Fotos (optional)</label><input type="text" name="p_fotos" placeholder="z. B. Fotos folgen später / Markus-Arm.jpg liegt bereit">
+  </section>
+
+  <section id="parkplatz" data-k="parkplatz">
+    <h3>Kontakt – Parkplätze</h3>
+    <p class="where">Hinweis unter der Karte auf der <a href="kontakt.html#formular" target="_blank">Kontaktseite</a></p>
+    <div class="now"><b>Heute</b>Parkplätze direkt beim Betrieb. Anlieferung mit Traktor &amp; Anhänger möglich. [bitte bestätigen]</div>
+    <div class="opts"><label><input type="radio" name="park_mode" value="ok"> Stimmt so</label><label><input type="radio" name="park_mode" value="aendern" checked> Text ändern</label><label><input type="radio" name="park_mode" value="aus"> Hinweis weglassen</label></div>
+    <div class="fields" data-mode="park_mode" data-on="aendern"><label>Neuer Text</label><textarea name="park_text">Parkplätze direkt beim Betrieb. Anlieferung mit Traktor &amp; Anhänger möglich.</textarea></div>
+  </section>
+
+  <section id="formular" data-k="formular">
+    <h3>Kontakt – Formular</h3>
+    <p class="where">Formular «Nachricht senden» auf der <a href="kontakt.html#formular" target="_blank">Kontaktseite</a></p>
+    <div class="now"><b>Heute</b>Das Formular prüft die Eingaben, verschickt aber noch nichts.</div>
+    <div class="opts">
+      <label><input type="radio" name="form_mode" value="ersetzen" checked> Vorübergehend durch «Anrufen» und «E-Mail schreiben» ersetzen</label>
+      <label><input type="radio" name="form_mode" value="mailto"> Formular öffnet das E-Mail-Programm mit den Angaben</label>
+    </div>
+    <p class="hint">Sobald die Seite bei Hostpoint läuft, baue ich den echten Versand an info@jostland.ch ein.</p>
+  </section>
+
+  <section id="werkstatt" data-k="werkstatt">
+    <h3>Arbeiten – Beispiele aus der Werkstatt</h3>
+    <p class="where">3 Karten auf der Seite <a href="arbeiten.html#reparatur" target="_blank">Arbeiten → Reparatur</a></p>
+    <div class="opts"><label><input type="radio" name="ws_mode" value="aus" checked> Ausblenden, bis echte Fotos da sind</label><label><input type="radio" name="ws_mode" value="aendern"> Beispiele eintragen</label></div>
+    <div class="fields" data-mode="ws_mode" data-on="aendern">
+      <div class="row"><div><label>1 · Titel</label><input type="text" name="ws1_titel"></div><div><label>1 · Kategorie</label><input type="text" name="ws1_kat" value="Traktor"></div></div>
+      <label>1 · Beschrieb</label><input type="text" name="ws1_text">
+      <div class="row"><div><label>2 · Titel</label><input type="text" name="ws2_titel"></div><div><label>2 · Kategorie</label><input type="text" name="ws2_kat" value="Bodenbearbeitung"></div></div>
+      <label>2 · Beschrieb</label><input type="text" name="ws2_text">
+      <div class="row"><div><label>3 · Titel</label><input type="text" name="ws3_titel"></div><div><label>3 · Kategorie</label><input type="text" name="ws3_kat" value="Einachser"></div></div>
+      <label>3 · Beschrieb</label><input type="text" name="ws3_text">
+      <p class="hint">Fotos dazu in den Ordner <b>werkstatt-bilder</b> legen (Dateiname hier im Beschrieb erwähnen).</p>
+    </div>
+  </section>
+
+  <section id="oldtimer" data-k="oldtimer">
+    <h3>Arbeiten – Oldtimer-Projekte</h3>
+    <p class="where">3 Karten auf der Seite <a href="arbeiten.html#oldtimer" target="_blank">Arbeiten → Oldtimer</a></p>
+    <div class="opts"><label><input type="radio" name="ot_mode" value="aus" checked> Ausblenden, bis echte Fotos da sind</label><label><input type="radio" name="ot_mode" value="aendern"> Projekte eintragen</label></div>
+    <div class="fields" data-mode="ot_mode" data-on="aendern">
+      <label>1 · Titel</label><input type="text" name="ot1_titel"><label>1 · Beschrieb</label><input type="text" name="ot1_text">
+      <label>2 · Titel</label><input type="text" name="ot2_titel"><label>2 · Beschrieb</label><input type="text" name="ot2_text">
+      <label>3 · Titel</label><input type="text" name="ot3_titel"><label>3 · Beschrieb</label><input type="text" name="ot3_text">
+    </div>
+  </section>
+
+  <section id="recht" data-k="recht">
+    <h3>Impressum &amp; Datenschutz</h3>
+    <p class="where"><a href="impressum.html" target="_blank">Impressum</a> · <a href="datenschutz.html" target="_blank">Datenschutz</a></p>
+    <div class="opts" style="flex-direction:column;align-items:flex-start">
+      <label><input type="checkbox" name="r_entwurf" checked> Gelbe «Entwurf»-Hinweise auf beiden Seiten entfernen</label>
+      <label><input type="checkbox" name="r_https" checked> Datenschutz: «[Nach dem Aufschalten prüfen]» bei HTTPS entfernen</label>
+      <label><input type="checkbox" name="r_fonts" checked> Datenschutz: Hinweis zur Schrift entfernen und Schrift auf den eigenen Server holen (Google Fonts entfällt)</label>
+      <label><input type="checkbox" name="r_bilder" checked> Impressum: Hinweis «[Bitte mit den Freigaben der Hersteller abgleichen]» entfernen</label>
+    </div>
+    <p class="hint">Bitte trotzdem kurz gegenlesen. Ich empfehle eine rechtliche Prüfung, aber das entscheidest du.</p>
+    <label>Weitere Änderungen (optional)</label><textarea name="r_weitere" placeholder="z. B. Text, der geändert werden soll"></textarea>
+  </section>
+
+  <section id="senden">
+    <h3>Änderungen übernehmen</h3>
+    <p class="where">Auf «Per E-Mail senden» klicken – dein E-Mail-Programm öffnet sich mit allen Angaben. Empfänger Lukas Arm eintragen und senden. Falls sich kein E-Mail-Programm öffnet: «Text kopieren» und in eine E-Mail einfügen.</p>
+    <label>Weitere Wünsche (optional)</label><textarea name="sonst" placeholder="Was sonst noch angepasst werden soll"></textarea>
+    <button class="btn" type="button" id="mail">Per E-Mail senden</button> <button class="btn" type="button" id="copy" style="background:#fff">Text kopieren</button><span class="ok-msg" id="okmsg">Kopiert – jetzt in eine E-Mail einfügen</span>
+    <textarea id="out" readonly></textarea>
+  </section>
+</main>
+</div>
+
+<script>
+(function(){
+  var KEY='jost-korrektur-v1', form=document.querySelector('main');
+  var els=function(){return form.querySelectorAll('input,textarea');};
+  function val(n){var e=form.querySelector('[name="'+n+'"]'); if(!e) return ''; if(e.type==='radio'){var c=form.querySelector('[name="'+n+'"]:checked'); return c?c.value:'';} if(e.type==='checkbox') return e.checked; return e.value.trim();}
+  function save(){try{var o={};els().forEach(function(e){if(!e.name)return; if(e.type==='radio'){if(e.checked)o[e.name]=e.value;} else if(e.type==='checkbox') o[e.name]=e.checked; else o[e.name]=e.value;}); localStorage.setItem(KEY,JSON.stringify(o));}catch(x){}}
+  function load(){try{var o=JSON.parse(localStorage.getItem(KEY)||'null'); if(!o) return; els().forEach(function(e){if(!(e.name in o))return; if(e.type==='radio') e.checked=(o[e.name]===e.value); else if(e.type==='checkbox') e.checked=o[e.name]; else e.value=o[e.name];});}catch(x){}}
+  function toggles(){form.querySelectorAll('.fields[data-mode]').forEach(function(f){var on=f.getAttribute('data-on')||'aendern'; f.classList.toggle('off', val(f.getAttribute('data-mode'))!==on);});}
+  function person(i,label){var m=val('p'+i+'_mode'); if(m==='aus') return '- '+label+': Karte ausblenden'; var s='- '+label+': '+(val('p'+i+'_name')||'(Name fehlt)')+' · '+val('p'+i+'_funktion'); s+=' · Tel. '+(val('p'+i+'_tel')||'Hauptnummer'); if(val('p'+i+'_mail')) s+=' · '+val('p'+i+'_mail'); return s;}
+  function cards(p,n){var a=[];for(var i=1;i<=3;i++){var t=val(p+i+'_titel'),x=val(p+i+'_text'),k=val(p+i+'_kat'); if(t||x) a.push('  '+i+'. '+(k?'['+k+'] ':'')+(t||'(ohne Titel)')+' – '+x);} return a.length?a.join('\n'):'  (keine Angaben)';}
+  function status(){
+    var st={
+      kennzahl: val('kennzahl_mode')==='aus' || !!val('kennzahl_jahre'),
+      personen: !!val('p1_name') && !!val('p2_funktion'),
+      parkplatz: !!val('park_mode'),
+      formular: !!val('form_mode'),
+      werkstatt: val('ws_mode')==='aus' || !!val('ws1_titel'),
+      oldtimer: val('ot_mode')==='aus' || !!val('ot1_titel'),
+      recht: true
+    };
+    document.querySelectorAll('.st').forEach(function(s){var ok=st[s.getAttribute('data-for')]; s.textContent=ok?'bereit':'offen'; s.classList.toggle('ok',ok);});
+  }
+  function build(){
+    var L=['Korrekturen jostland.ch – bitte übernehmen:',''];
+    L.push('STARTSEITE – Erfahrung: '+(val('kennzahl_mode')==='aus'?'Kennzahl ausblenden':(val('kennzahl_jahre')||'?')+'+ · '+val('kennzahl_text')));
+    L.push('','KONTAKT – Ansprechpartner','- Einleitung: '+val('p_intro'));
+    L.push(person(1,'Geschäftsleitung'),person(2,'Werkstattleitung'),person(3,'Werkstatt'),person(4,'Ersatzteile'));
+    if(val('p_fotos')) L.push('- Fotos: '+val('p_fotos'));
+    var pm=val('park_mode'); L.push('','KONTAKT – Parkplätze: '+(pm==='ok'?'stimmt so (nur Platzhalter entfernen)':pm==='aus'?'Hinweis weglassen':'neuer Text: '+val('park_text')));
+    L.push('','KONTAKT – Formular: '+(val('form_mode')==='ersetzen'?'vorübergehend durch «Anrufen» und «E-Mail schreiben» ersetzen':'Formular öffnet E-Mail-Programm mit den Angaben'));
+    L.push('','ARBEITEN – Werkstatt-Beispiele: '+(val('ws_mode')==='aus'?'ausblenden bis Fotos da':'eintragen:\n'+cards('ws')));
+    L.push('','ARBEITEN – Oldtimer-Projekte: '+(val('ot_mode')==='aus'?'ausblenden bis Fotos da':'eintragen:\n'+cards('ot')));
+    var r=[]; if(val('r_entwurf')) r.push('Entwurf-Hinweise entfernen'); if(val('r_https')) r.push('HTTPS-Platzhalter entfernen'); if(val('r_fonts')) r.push('Schrift lokal einbinden, Google-Fonts-Abschnitt streichen'); if(val('r_bilder')) r.push('Bildfreigabe-Hinweis entfernen');
+    L.push('','IMPRESSUM & DATENSCHUTZ: '+(r.length?r.join('; '):'nichts ändern')); if(val('r_weitere')) L.push('- Weitere: '+val('r_weitere'));
+    if(val('sonst')) L.push('','SONSTIGES: '+val('sonst'));
+    document.getElementById('out').value=L.join('\n');
+  }
+  function update(){toggles();status();build();save();}
+  load(); update();
+  document.getElementById('mail').addEventListener('click',function(){ build(); location.href='mailto:?subject='+encodeURIComponent('Korrekturen Homepage jostland.ch')+'&body='+encodeURIComponent(document.getElementById('out').value); });
+  form.addEventListener('input',update); form.addEventListener('change',update);
+  document.getElementById('copy').addEventListener('click',function(){
+    var t=document.getElementById('out'); t.select();
+    var done=function(){var m=document.getElementById('okmsg'); m.style.display='inline'; setTimeout(function(){m.style.display='none';},3000);};
+    try{ navigator.clipboard.writeText(t.value).then(done,function(){document.execCommand('copy');done();}); }catch(x){ try{document.execCommand('copy');done();}catch(y){} }
+  });
+})();
+</script>
+</body>
+</html>
